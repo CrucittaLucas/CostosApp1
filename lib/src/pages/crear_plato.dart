@@ -10,7 +10,64 @@ class CrearPlatoPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.indigo,
         child: Icon(Icons.add, size: 30),
-        onPressed: () {},
+        onPressed: () {
+          showDialog(
+            context: context,
+            barrierDismissible: true,
+            builder: (context) {
+              return AlertDialog(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)),
+                title: Text('Agregando un Ingrediente al Plato'),
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    TextField(
+                      //autofocus: true,
+                      textCapitalization: TextCapitalization.sentences,
+
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        hintText: 'Nombre del Producto',
+                        labelText: 'Nombre del Producto',
+                      ),
+                      onChanged: (valor) {},
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    TextField(
+                      //autofocus: true,
+                      textCapitalization: TextCapitalization.sentences,
+
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0)),
+                        hintText: 'Cantidad/Unidades',
+                        labelText: 'Cantidad/Unidades',
+                      ),
+                      onChanged: (valor) {},
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                  ],
+                ),
+                actions: <Widget>[
+                  FlatButton(
+                    child: Text('Cancelar'),
+                    onPressed: () => Navigator.of(context).pop(),
+                  ),
+                  FlatButton(
+                    child: Text('Agregar'),
+                    onPressed: () {},
+                  )
+                ],
+              );
+            },
+          );
+        },
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.indigoAccent,
@@ -61,7 +118,7 @@ class CrearPlatoPage extends StatelessWidget {
                 ),
                 Expanded(child: Container()),
                 Text(
-                  'Costo \$90',
+                  'Costo \$0',
                   style: TextStyle(
                       color: Colors.red,
                       fontSize: 23,
@@ -79,10 +136,10 @@ class CrearPlatoPage extends StatelessWidget {
             padding: EdgeInsets.only(top: 20),
             height: _screenSize.height * 0.3,
             child: PageView(
-              controller: PageController(initialPage: 1, viewportFraction: 0.3),
+              controller: PageController(initialPage: 1, viewportFraction: 0.35),
               children: <Widget>[
-                _fotoProducto1(),
-                _fotoProducto2(),
+                _fotoProducto3(),
+                _fotoProducto3(),
                 _fotoProducto3(),
               ],
             ),
@@ -122,6 +179,7 @@ class CrearPlatoPage extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       child: Container(
+        margin: EdgeInsets.only(right: 3,left: 3),
           color: Colors.grey[200],
           child: Center(
               child: Icon(
