@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 class CrearPlatoPage extends StatelessWidget {
   @override
@@ -149,31 +148,31 @@ class CrearPlatoPage extends StatelessWidget {
     );
   }
 
-  Widget _fotoProducto1() {
-    return Container(
-      margin: EdgeInsets.only(right: 15),
-      child: Column(
-        children: <Widget>[
-          Image.asset('assets/pan_burger.jpg', height: 100),
-          Text('Pan'),
-          Text('x 100gr')
-        ],
-      ),
-    );
-  }
+  // Widget _fotoProducto1() {
+  //   return Container(
+  //     margin: EdgeInsets.only(right: 15),
+  //     child: Column(
+  //       children: <Widget>[
+  //         Image.asset('assets/pan_burger.jpg', height: 100),
+  //         Text('Pan'),
+  //         Text('x 100gr')
+  //       ],
+  //     ),
+  //   );
+  // }
 
-  Widget _fotoProducto2() {
-    return Container(
-      margin: EdgeInsets.only(right: 15),
-      child: Column(
-        children: <Widget>[
-          Image.asset('assets/medallon_carne.jpg', height: 100),
-          Text('carne'),
-          Text('x 200gr')
-        ],
-      ),
-    );
-  }
+  // Widget _fotoProducto2() {
+  //   return Container(
+  //     margin: EdgeInsets.only(right: 15),
+  //     child: Column(
+  //       children: <Widget>[
+  //         Image.asset('assets/medallon_carne.jpg', height: 100),
+  //         Text('carne'),
+  //         Text('x 200gr')
+  //       ],
+  //     ),
+  //   );
+  // }
 
   Widget _fotoProducto3() {
     return ClipRRect(
